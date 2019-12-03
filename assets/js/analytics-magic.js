@@ -1,6 +1,10 @@
 var initializeButton = document.getElementById("initialize-button");
 initializeButton.onclick = function initialize(e) {
   e.preventsDefault;
+
+  // appboy initilize
+  appboy.initialize('59023613-ab90-427f-8d4b-58504cfce282',{baseUrl:'https://sdk.iad-03.braze.com/api/v3'});
+
   const writeKey = document.getElementById("write-key").value;
   !(function() {
     var analytics = (window.analytics = window.analytics || []);
