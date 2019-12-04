@@ -41,7 +41,9 @@
 					<li><span class="icon">|</span></li>
 					<li><input type="submit" value="track()" class="primary" id="track-button" /></li>
 					<li><span class="icon">|</span></li>
-					<li><input type="submit" value="identify_b()" class="primary" id="identify-b-button" /></li>
+					<li><input type="submit" value="identify_generate_new_user()" class="primary" id="identify-b-button" /></li>
+					<li><span class="icon">|</span></li>
+					<li><input type="submit" value="reset()" class="primary" id="reset-button" onclick="analytics.reset()"/></li>
 				</ul>
 			</nav>
 		</header>
@@ -169,7 +171,7 @@
 
 		identifyAButton.onclick = (e) => {
 			e.preventsDefault;
-			analytics.reset();
+			// analytics.reset();
 			id='b1c7ac1c-f70b-1283-268b-d33a5b474dda';
 			traits = {
 				username: "osama.khan@segment.com",
