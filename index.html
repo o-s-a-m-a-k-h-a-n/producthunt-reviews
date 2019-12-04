@@ -43,7 +43,7 @@
 					<li><span class="icon">|</span></li>
 					<li><input type="submit" value="identify_generate_new_user()" class="primary" id="identify-b-button" /></li>
 					<li><span class="icon">|</span></li>
-					<li><input type="submit" value="reset()" class="primary" id="reset-button" onclick="analytics.reset()"/></li>
+					<li><input type="submit" value="reset()" class="primary" id="reset-button" /></li>
 				</ul>
 			</nav>
 		</header>
@@ -88,6 +88,7 @@
 		var trackButton = document.getElementById("track-button");
 		var identifyAButton = document.getElementById("identify-a-button");
 		var pageButton = document.getElementById("page-button");
+		var resetButton = document.getElementById("reset-button");
 		var identifyBButton = document.getElementById("identify-b-button");
 
 		initializeButton.onclick = (e) => {
@@ -165,6 +166,14 @@
 			e.preventsDefault;
 			analytics.page(`Page Call @ ${new Date().toLocaleTimeString()}`);
 			logger(`Page call nothing fancy`);
+			return;
+
+		};
+
+		resetButton.onclick = (e) => {
+			e.preventsDefault;
+			analytics.reset();
+			logger('Reset()');
 			return;
 
 		};
