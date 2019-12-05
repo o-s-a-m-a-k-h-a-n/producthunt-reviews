@@ -69,7 +69,7 @@
 	<script type="text/javascript" async="" src="https://js.appboycdn.com/web-sdk/2.4/appboy.min.js"></script>
 	<script type="text/javascript">
 		function logger(message) {
-			console.log(message);
+			console.log(message, 'color: #008000');
 			document.getElementById('status').innerText += `\n${new Date().toLocaleTimeString()}: ${message}`;
 			return;
 		}
