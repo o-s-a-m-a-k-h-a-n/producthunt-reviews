@@ -220,7 +220,7 @@
 
 		cookieButton.onclick = (e) => {
 			e.preventsDefault;
-			document.cookie = 'mykey=myvalue';
+			document.cookie = 'mykey=myvalue; SameSite=strict';
 			logger(`Cookie set`);
 		};
 
